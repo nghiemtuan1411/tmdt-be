@@ -1,5 +1,5 @@
 const userModel = require("../models/user.model");
-const nodemailer = require("nodemailer");
+var nodemailer = require("nodemailer");
 
 module.exports = {
   list: async (req, res) => {
