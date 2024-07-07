@@ -1,5 +1,5 @@
 const userModel = require("../models/user.model");
-const ErrorResponse = require("../helpers/ErrorResponse");
+const ErrorResponse = require("../helpers/ErrorResponse.js");
 const nodemailer = require("nodemailer");
 
 module.exports = {
