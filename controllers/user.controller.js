@@ -1,5 +1,4 @@
 const userModel = require("../models/user.model");
-const ErrorResponse = require("../helpers/ErrorResponse.js");
 const nodemailer = require("nodemailer");
 
 module.exports = {
@@ -96,7 +95,7 @@ module.exports = {
         .select("-password");
 
       if (!user) {
-        throw new ErrorResponse(404, "Email chưa được đăng kí");
+        return res.status(404).json("Email chưa được đăng kí");
       }
       return res.status(200).json(user);
     } catch (error) {
